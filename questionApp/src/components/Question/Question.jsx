@@ -11,15 +11,8 @@ function Question({ data }) {
   const [falseAnswer, setFalseAnswer] = useState(0);
   const [trueResult, setTrueResult] = useState([]);
   const [falseResult, setFalseResult] = useState([]);
-  const [result, setResult] = useState(false);
 
-  const currentQuestion = data[questionIndex] ? data[questionIndex] : null;
-
-  useEffect(() => {
-    if (currentQuestion == null) {
-      setResult(true);
-    }
-  }, [questionIndex]);
+  const currentQuestion = data[questionIndex];
 
   useEffect(() => {
     if (timer > 0) {
@@ -62,7 +55,7 @@ function Question({ data }) {
 
   return (
     <>
-      {questionIndex < data.length && (
+      {questionIndex < data.length ? (
         <div className="questions">
           <div className="question-title">
             <h3 className="question">Question {questionIndex + 1}</h3>
@@ -90,12 +83,8 @@ function Question({ data }) {
             </div>
           </div>
         </div>
-      )}
-
-      {result && (
+      ) : (
         <>
-          <p>asdasd</p>
-          <p>asdasd</p>
           <Result
             trueAnswer={trueAnswer}
             falseAnswer={falseAnswer}
