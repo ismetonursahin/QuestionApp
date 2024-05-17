@@ -3,7 +3,7 @@ import "./Question.css";
 import Result from "../Result/Result";
 
 function Question({ data, setStart }) {
-  const [timer, setTimer] = useState(10);
+  const [timer, setTimer] = useState(30);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [showOptions, setShowOptions] = useState(false);
   const [trueAnswer, setTrueAnswer] = useState(0);
@@ -25,15 +25,15 @@ function Question({ data, setStart }) {
   useEffect(() => {
     let timer = setTimeout(() => {
       setQuestionIndex((prev) => prev + 1);
-      setTimer(10);
-    }, 10000);
+      setTimer(30);
+    }, 30000);
     return () => clearTimeout(timer);
   }, [questionIndex]);
 
   useEffect(() => {
     let timer = setTimeout(() => {
       setShowOptions(true);
-    }, 2000);
+    }, 10000);
     return () => {
       setShowOptions(false);
       clearTimeout(timer);
@@ -41,7 +41,7 @@ function Question({ data, setStart }) {
   }, [currentQuestion]);
 
   let btnClick = (index, answer) => {
-    if (currentQuestion.options[index] === answer) {
+    if (currentQuestion.options[index] == answer) {
       setTrueAnswer((prev) => prev + 1);
       setTrueResult((prev) => [...prev, currentQuestion.options[index]]);
     } else {
@@ -49,7 +49,7 @@ function Question({ data, setStart }) {
       setFalseResult((prev) => [...prev, currentQuestion.options[index]]);
     }
     setQuestionIndex((prev) => prev + 1);
-    setTimer(10);
+    setTimer(30);
   };
 
   return (
@@ -72,9 +72,7 @@ function Question({ data, setStart }) {
                 currentQuestion.options.map((item, indexNum) => (
                   <button
                     key={indexNum}
-                    onClick={() =>
-                      btnClick(indexNum, currentQuestion.options[questionIndex])
-                    }
+                    onClick={() => btnClick(indexNum, currentQuestion.answer)}
                   >
                     {item}
                   </button>
