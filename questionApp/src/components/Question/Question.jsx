@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Question.css";
-import { questions } from "../../questions";
 import Result from "../Result/Result";
 
-function Question({ data }) {
+function Question({ data, setStart }) {
   const [timer, setTimer] = useState(10);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [showOptions, setShowOptions] = useState(false);
@@ -65,10 +64,10 @@ function Question({ data }) {
               Time : <span>{timer}</span>
             </h5>
           </div>
-          <div className="question">
+          <div className="question-block">
             <img src={currentQuestion.media} alt="" />
             <h3>{currentQuestion.question}</h3>
-            <div>
+            <div className="buttons">
               {showOptions &&
                 currentQuestion.options.map((item, indexNum) => (
                   <button
@@ -90,6 +89,8 @@ function Question({ data }) {
             falseAnswer={falseAnswer}
             trueResult={trueResult}
             falseResult={falseResult}
+            setStart={setStart}
+            data={data}
           />
         </>
       )}

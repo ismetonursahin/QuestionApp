@@ -4,7 +4,7 @@ import Question from "./components/Question/Question";
 import { questions } from "./questions";
 
 function App() {
-  const [start, setStart] = useState(true);
+  const [start, setStart] = useState(false);
 
   let handleStartButton = () => {
     setStart(() => true);
@@ -33,7 +33,7 @@ function App() {
           <button onClick={handleStartButton}>OYUNA BAŞLA</button>
         </div>
       )}
-      {start && <Question data={questions}></Question>}
+      {start && <Question data={questions} setStart={setStart}></Question>}
     </>
   );
 }

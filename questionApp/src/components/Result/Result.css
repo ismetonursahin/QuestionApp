@@ -1,3 +1,112 @@
-.results h1 {
-  color: wheat;
+.results {
+  background-color: #2e3683;
+  color: white;
+  width: 80vw;
+  height: 80vh;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.result {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.answer-total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15rem;
+}
+
+.baslik h1 {
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.baslik {
+  display: flex;
+}
+.baslik button {
+  width: 4rem;
+  height: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  right: 1rem;
+  top: 0.5rem;
+  position: absolute;
+  font-weight: 600;
+}
+
+.answer {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  h4 {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.total {
+  border: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h2 {
+    font-size: 2.5rem;
+  }
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+.answers {
+  display: flex;
+  gap: 10rem;
+  margin-top: 4rem;
+}
+
+.true-answers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 1.2rem;
+  }
+  li {
+    margin-top: 0.2rem;
+    list-style: none;
+    font-size: 1rem;
+    color: lightgreen;
+    font-weight: 600;
+  }
+}
+
+.false-answers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 1.2rem;
+  }
+  li {
+    margin-top: 0.2rem;
+    list-style: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: lightpink;
+  }
 }
