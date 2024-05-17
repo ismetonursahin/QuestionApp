@@ -4,15 +4,22 @@ import { questions } from "../../questions";
 import Result from "../Result/Result";
 
 function Question({ data }) {
-  const [timer, setTimer] = useState(30);
+  const [timer, setTimer] = useState(10);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [showOptions, setShowOptions] = useState(false);
-  const [trueAnswer, setTrueAnswer] = useState([]);
-  const [falseAnswer, setFalseAnswer] = useState([]);
-  const [trueResult, setTrueResult] = useState(0);
-  const [falseResult, setFalseResult] = useState(0);
+  const [trueAnswer, setTrueAnswer] = useState(0);
+  const [falseAnswer, setFalseAnswer] = useState(0);
+  const [trueResult, setTrueResult] = useState([]);
+  const [falseResult, setFalseResult] = useState([]);
+  const [result, setResult] = useState(false);
 
-  const currentQuestion = data[questionIndex];
+  const currentQuestion = data[questionIndex] ? data[questionIndex] : null;
+
+  useEffect(() => {
+    if (currentQuestion == null) {
+      setResult(true);
+    }
+  }, [questionIndex]);
 
   useEffect(() => {
     if (timer > 0) {
@@ -26,15 +33,15 @@ function Question({ data }) {
   useEffect(() => {
     let timer = setTimeout(() => {
       setQuestionIndex((prev) => prev + 1);
-      setTimer(30);
-    }, 30000);
+      setTimer(10);
+    }, 10000);
     return () => clearTimeout(timer);
   }, [questionIndex]);
 
   useEffect(() => {
     let timer = setTimeout(() => {
       setShowOptions(true);
-    }, 10000);
+    }, 2000);
     return () => {
       setShowOptions(false);
       clearTimeout(timer);
@@ -50,12 +57,12 @@ function Question({ data }) {
       setFalseResult((prev) => [...prev, currentQuestion.options[index]]);
     }
     setQuestionIndex((prev) => prev + 1);
-    setTimer(30);
+    setTimer(10);
   };
 
   return (
     <>
-      {questionIndex < data.length ? (
+      {questionIndex < data.length && (
         <div className="questions">
           <div className="question-title">
             <h3 className="question">Question {questionIndex + 1}</h3>
@@ -73,10 +80,9 @@ function Question({ data }) {
                 currentQuestion.options.map((item, indexNum) => (
                   <button
                     key={indexNum}
-                    onClick={btnClick(
-                      indexNum,
-                      currentQuestion.options[questionIndex]
-                    )}
+                    onClick={() =>
+                      btnClick(indexNum, currentQuestion.options[questionIndex])
+                    }
                   >
                     {item}
                   </button>
@@ -84,9 +90,18 @@ function Question({ data }) {
             </div>
           </div>
         </div>
-      ) : (
+      )}
+
+      {result && (
         <>
-          <Result></Result>
+          <p>asdasd</p>
+          <p>asdasd</p>
+          <Result
+            trueAnswer={trueAnswer}
+            falseAnswer={falseAnswer}
+            trueResult={trueResult}
+            falseResult={falseResult}
+          />
         </>
       )}
     </>

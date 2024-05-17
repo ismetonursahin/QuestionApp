@@ -1,12 +1,10 @@
 import React from "react";
 import "./Result.css";
 
-function Result() {
+function Result(trueResult, trueAnswer, falseAnswer, falseResult) {
   return (
     <div>
-      <div className="results">
-        <h1>Result</h1>
-      </div>
+      <div className="results">asdasdas</div>
     </div>
   );
 }
