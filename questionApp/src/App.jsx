@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Question from "./components/Question/Question";
+import { questions } from "./questions";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [start, setStart] = useState(true);
 
+  let handleStartButton = () => {
+    setStart(() => true);
+  };
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {!start && (
+        <div className="start-page">
+          <h1>Question App</h1>
+          <div className="kurallar">
+            <h3>Oyun Kuralları ?</h3>
+            <ul>
+              <li>Her soru ekranda en fazla 30sn gözükür.</li>
+              <li>İlk 10sn cevap şıkları görünmeyecektir.</li>
+              <li>
+                Cevap şıklarından biri tıklandıktan ya da 30sn tamamlandıktan
+                sonra yeni soruya geçilecektir.
+              </li>
+              <li>Geçmiş sorulara dönülemeyecektir.</li>
+              <li>
+                Test bitiminde her soruya verilen yanıt ile doğru ve yanlış
+                sayıları kullanıcı ile paylaşılacaktır.
+              </li>
+            </ul>
+          </div>
+          <button onClick={handleStartButton}>OYUNA BAŞLA</button>
+        </div>
+      )}
+      {start && <Question data={questions}></Question>}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
