@@ -110,3 +110,47 @@
     color: lightpink;
   }
 }
+
+@media (max-width: 576px) {
+  .answer-total {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .answers {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .total {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .total h2 {
+    font-size: 2rem;
+  }
+
+  .total h1 {
+    font-size: 2.5rem;
+  }
+
+  .baslik h1 {
+    font-size: 2.5rem;
+  }
+
+  .baslik button {
+    width: 3rem;
+    height: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .answer h4 {
+    font-size: 1.2rem;
+  }
+
+  .answers {
+    gap: 1rem;
+  }
+}

@@ -58,3 +58,33 @@ body {
   color: white;
   text-align: center;
 }
+@media (max-width: 576px) {
+  .start-page {
+    width: 90vw;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .start-page h1 {
+    font-size: 4rem;
+  }
+
+  .start-page h3 {
+    font-size: 2rem;
+  }
+
+  .start-page button {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .start-page ul {
+    margin-top: 1.5rem;
+  }
+
+  .start-page li {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}
