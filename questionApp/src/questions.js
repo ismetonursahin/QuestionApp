@@ -1,4 +1,13 @@
 import cinseddi from "../public/cin-seddi.jpg";
+import pamuk from "../public/pamuk.jpg";
+import tarkan from "../public/tarkan.jpg";
+import kus from "../public/fobi.jpg";
+import balik from "../public/balik.jpg";
+import sandal from "../public/bandira.jpg";
+import hadise from "../public/billboard.jpg";
+import parfum from "../public/parfum.jpg";
+import trex from "../public/trex.jpg";
+import fobi from "../public/fobi.jpg";
 
 export const questions = [
   {
@@ -11,14 +20,14 @@ export const questions = [
     question: "İlk Pamuk şekeri bulan kişinin mesleği nedir?",
     options: ["Gıda Mühendisi", "Diş Doktoru", "Ev Hanımı", "Güzellik Uzmanı"],
     answer: "Diş Doktoru",
-    media: "../public/pamuk.jpg",
+    media: pamuk,
   },
   {
     question:
       "Tarkan'ın 'Hüp' klibini izledikten sonra gaza gelip 'Tarkan keşke beni hüpletseydi' diye açıklamda bulunan kişi kimdir?",
     options: ["Gülben Ergen", "Hülya Avşar", "Harika Avcı", "Sevtap Parman"],
     answer: "Gülben Ergen",
-    media: "../public/tarkan.jpg",
+    media: tarkan,
   },
   {
     question: "Pteronofobi nedir?",
@@ -29,46 +38,46 @@ export const questions = [
       "Kuş tüyüyle gıdıklanma korkusu",
     ],
     answer: "Kuş tüyüyle gıdıklanma korkusu",
-    media: "../public/fobi.jpg",
+    media: kus,
   },
   {
     question:
       "Ortalama ömürleri 5 yıl olan Japon balıklarının en uzun yaşayanı Tish, bütün istatistikleri alt üst ederek kaç yıl boyunca hayata tutunmayı başarmıştır?",
     options: ["43", "78", "23", "99"],
     answer: "43",
-    media: "../public/balik.jpg",
+    media: balik,
   },
   {
     question:
       "90'lara damgasını vuran 'Bandıra Bandıra' şarkısının söz yazarı kimdir?",
     options: ["Sezen Aksu", "Sibel Can", "Mustafa Sandal", "Bülent Ersoy"],
     answer: "Mustafa Sandal",
-    media: "../public/bandira.jpg",
+    media: sandal,
   },
   {
     question:
       "Hangi şarkıcımız yine kendisi gibi şarkıcı olan sevgilisinden ayrıldıktan sonra tam evinin karşısındaki apartmanın tamamını kendi posteriyle kaplatmıştır?",
     options: ["Hande Yener", "Hadise", "Gülşen", "Simge"],
     answer: "Hadise",
-    media: "../public/billboard.jpg",
+    media: hadise,
   },
   {
     question: "Antik Roma'da kadınlar parfüm olarak ne kullanıyordu?",
     options: ["Gül Suyu", "Bal", "Gladyatör Teri", "Kan"],
     answer: "Gladyatör Teri",
-    media: "../public/parfum.jpg",
+    media: parfum,
   },
   {
     question: "T-Rex'in yaşayan en yakın akrabası aşağıdakilerden hangisidir?",
     options: ["İnekler", "Tavuklar", "Timsahlar", "Köpekler"],
     answer: "Tavuklar",
-    media: "../public/trex.jpg",
+    media: trex,
   },
   {
     question:
       "Her şeyin olduğu gibi mutluluğun da fobisi varmış. Bu fobiye ne ad verilir?",
     options: ["Çerofobi", "Euphobia", "Felicifobia", "Mutluluk Korkusu"],
     answer: "Çerofobi",
-    media: "../public/fobi.jpg",
+    media: fobi,
   },
 ];
