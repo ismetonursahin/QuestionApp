@@ -9,12 +9,12 @@ Currently, two official plugins are available:
 
 ### website
 
-![](/questionApp/src/assets/pictures/1.png)
+![](/questionApp/public/pictures/1.png)
 
 ---
 
-![](/questionApp/src/assets/pictures/2.png)
+![](/questionApp/public/pictures/2.png)
 
 ---
 
-![](/questionApp/src/assets/pictures/3.png)
+![](/questionApp/public/pictures/3.png)
