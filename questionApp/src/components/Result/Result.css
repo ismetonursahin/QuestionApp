@@ -42,6 +42,8 @@
   top: 0.5rem;
   position: absolute;
   font-weight: 600;
+  color: #2e3683;
+  background-color: white;
 }
 
 .answer {
