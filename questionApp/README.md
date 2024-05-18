@@ -13,12 +13,12 @@ Currently, two official plugins are available:
 
 ---
 
-![](/questionApp/public/pictures/1.png)
+![](/questionApp/public/1.png)
 
 ---
 
-![](/questionApp/public/pictures/2.png)
+![](/questionApp/public/2.png)
 
 ---
 
-![](/questionApp/public/pictures/3.png)
+![](/questionApp/public/3.png)
