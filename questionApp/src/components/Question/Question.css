@@ -64,6 +64,10 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
+.question-block .buttons button {
+  background-color: #fff;
+  color: #2e3683;
+}
 
 @media (max-width: 576px) {
   .questions {
